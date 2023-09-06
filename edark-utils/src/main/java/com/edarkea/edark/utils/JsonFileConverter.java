@@ -13,13 +13,7 @@ import java.nio.charset.Charset;
  */
 public class JsonFileConverter<T> {
 
-    private final Class<T> type;
-
-    public JsonFileConverter(Class<T> type) {
-        this.type = type;
-    }
-
-    public T fromJson(String json) throws Exception {
+    public T fromJson(Class<T> type, String json) throws Exception {
         ObjectMapper objectMapper = new ObjectMapper();
         return objectMapper.readValue(json, type);
     }
@@ -29,7 +23,7 @@ public class JsonFileConverter<T> {
         return objectMapper.writeValueAsString(obj);
     }
 
-    public T fromJson(InputStream inputStream, Charset charsets) throws IOException, Exception {
+    public T fromJson(Class<T> type, InputStream inputStream, Charset charsets) throws IOException, Exception {
         InputStreamReader reader = new InputStreamReader(inputStream, charsets);
         BufferedReader bufferedReader = new BufferedReader(reader);
         String line;
@@ -40,7 +34,7 @@ public class JsonFileConverter<T> {
         bufferedReader.close();
         reader.close();
         inputStream.close();
-        return fromJson(jsonContent.toString());
+        return fromJson(type, jsonContent.toString());
     }
 
 }

@@ -3,7 +3,7 @@
         "applicationName": "Edarkea System Application",
         "version": "1.0.0-beta0",
         "user": {
-            "name": "Edark",
+            "name": "Steeven Ayui",
             "options": [
                 {
                     "type": "ACTION",
@@ -16,7 +16,10 @@
                     "action": "onLogout"
                 },
                 {
-                    "type": "DIVIDER",
+                    "type": "DIVIDER"
+                },
+                {
+                    "type": "ACTION",
                     "name": "Salir",
                     "action": "onExit"
                 }
