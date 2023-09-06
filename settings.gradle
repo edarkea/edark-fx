@@ -1,0 +1,5 @@
+rootProject.name = 'edark-fx'
+
+include 'edark-core'
+include 'edark-ui'
+include 'edark-utils'

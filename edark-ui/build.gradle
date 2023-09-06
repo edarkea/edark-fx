@@ -1,0 +1,17 @@
+description = 'Framework UI Java FX'
+
+apply plugin: 'application'
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+}
+
+mainClassName = 'com.edarkea.edark.ui.EdarkApplication'
+
+dependencies {
+    implementation 'org.openjfx:javafx-controls:17'
+    implementation 'org.openjfx:javafx-fxml:17'
+    implementation project(':edark-utils')
+    implementation project(':edark-core')
+}

@@ -1,0 +1,29 @@
+{
+    "header": {
+        "applicationName": "Edarkea System Application",
+        "version": "1.0.0-beta0",
+        "user": {
+            "name": "Edark",
+            "options": [
+                {
+                    "type": "ACTION",
+                    "name": "Perfil",
+                    "action": "onProfile"
+                },
+                {
+                    "type": "ACTION",
+                    "name": "Cerrar Sesión",
+                    "action": "onLogout"
+                },
+                {
+                    "type": "DIVIDER",
+                    "name": "Salir",
+                    "action": "onExit"
+                }
+            ]
+        }
+    },
+    "footer": {
+        "description": "Edarkea Systems © {{year}} Todos los derechos reservados."
+    }
+}

@@ -1,0 +1,15 @@
+description = 'Edark Framework UI Using Java FX'
+
+allprojects {
+
+    group = 'com.edarkea'
+
+    repositories {
+        mavenCentral()
+    }
+
+}
+
+subprojects {
+    apply plugin: 'java'
+}
