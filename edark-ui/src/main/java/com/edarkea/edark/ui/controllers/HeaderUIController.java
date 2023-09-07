@@ -1,4 +1,4 @@
-package com.edarkea.edark.ui.events;
+package com.edarkea.edark.ui.controllers;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -8,7 +8,7 @@ import javafx.scene.control.MenuItem;
  *
  * @author Steeven Ayui
  */
-public class HeaderUIEvent implements EventHandler<ActionEvent> {
+public class HeaderUIController implements EventHandler<ActionEvent> {
 
     @Override
     public void handle(ActionEvent event) {

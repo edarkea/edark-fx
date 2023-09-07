@@ -7,19 +7,22 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-
 <BorderPane xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <left>
       <Label fx:id="lbl_app_name" text="My Application Name" BorderPane.alignment="CENTER">
          <font>
-            <Font size="18.0" />
+            <Font name="System Bold" size="20.0" />
          </font>
       </Label>
    </left>
    <center>
       <HBox alignment="CENTER_RIGHT" BorderPane.alignment="CENTER">
          <children>
-            <MenuButton fx:id="mb_user" mnemonicParsing="false" text="User Signed" />
+            <MenuButton fx:id="mb_user" mnemonicParsing="false" text="User Signed">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </MenuButton>
          </children>
       </HBox>
    </center>

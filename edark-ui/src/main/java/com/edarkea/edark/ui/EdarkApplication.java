@@ -1,15 +1,17 @@
 package com.edarkea.edark.ui;
 
 import com.edarkea.edark.core.enums.ActionEnum;
+import com.edarkea.edark.core.ui.FooterUIModel;
 import com.edarkea.edark.core.ui.HeaderUIModel;
 import com.edarkea.edark.core.ui.MainConfigUIModel;
 import com.edarkea.edark.core.ui.OptionUIModel;
-import com.edarkea.edark.ui.events.HeaderUIEvent;
+import com.edarkea.edark.ui.controllers.HeaderUIController;
 import com.edarkea.edark.ui.models.RootConfigModel;
 import com.edarkea.edark.utils.JsonFileConverter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
+import java.time.LocalDate;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -17,7 +19,9 @@ import javafx.scene.control.Label;
 import javafx.scene.control.MenuButton;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.SeparatorMenuItem;
+import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
 /**
@@ -62,12 +66,20 @@ public class EdarkApplication extends Application {
         //Read Header
         BorderPane headerComponent
                 = EdarkApplication.loadHeaderComponent(getClass(),
-                        "/templates/content/header_content.fxml",
+                        "/templates/layout/header_content.fxml",
                         mainConfig.getHeader());
         root.setTop(headerComponent);
 
+        HBox footerComponent
+                = EdarkApplication.loadFooterComponent(getClass(),
+                        "/templates/layout/footer_content.fxml",
+                        mainConfig.getFooter());
+
+        root.setBottom(footerComponent);
+
         primaryStage.setScene(scene);
         primaryStage.setTitle(mainConfig.getHeader().getApplicationName());
+        primaryStage.getIcons().add(new Image("/img/logoes.png"));
         primaryStage.show();
     }
 
@@ -84,7 +96,7 @@ public class EdarkApplication extends Application {
 
         MenuButton menuButton = (MenuButton) loader.getNamespace().get("mb_user");
         menuButton.setText(header.getUser().getName());
-        HeaderUIEvent events = new HeaderUIEvent();
+        HeaderUIController events = new HeaderUIController();
         for (OptionUIModel option : header.getUser().getOptions()) {
             if (option.getType() == ActionEnum.ACTION) {
                 MenuItem menuItem = new MenuItem(option.getName());
@@ -98,6 +110,19 @@ public class EdarkApplication extends Application {
                 menuButton.getItems().add(divider);
             }
         }
+        return pane;
+    }
+
+    private static HBox loadFooterComponent(Class fromClass, String name, FooterUIModel footer) throws IOException {
+        FXMLLoader loader = new FXMLLoader(fromClass.getResource(name));
+        HBox pane = loader.load();
+
+        Label appName = (Label) loader.getNamespace().get("lbl_desciption");
+        LocalDate date = LocalDate.now();
+        appName.setText(
+                footer.getDescription().replace("{{year}}",
+                        String.valueOf(date.getYear())));
+
         return pane;
     }
 
