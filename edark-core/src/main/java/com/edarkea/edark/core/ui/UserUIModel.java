@@ -13,6 +13,7 @@ import lombok.Setter;
 public class UserUIModel {
 
     private String name;
+    private String role;
     private List<OptionUIModel> options;
 
 }

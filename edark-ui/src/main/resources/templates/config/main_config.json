@@ -4,6 +4,7 @@
         "version": "1.0.0-beta0",
         "user": {
             "name": "Steeven Ayui",
+            "role": "Cajero",
             "options": [
                 {
                     "type": "ACTION",

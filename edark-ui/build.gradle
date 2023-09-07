@@ -12,6 +12,7 @@ mainClassName = 'com.edarkea.edark.ui.EdarkApplication'
 dependencies {
     implementation 'org.openjfx:javafx-controls:17'
     implementation 'org.openjfx:javafx-fxml:17'
+    implementation 'io.github.mkpaz:atlantafx-base:2.0.1'
     implementation project(':edark-utils')
     implementation project(':edark-core')
 }
