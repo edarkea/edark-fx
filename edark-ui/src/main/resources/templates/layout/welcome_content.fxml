@@ -6,25 +6,31 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1">
-   <center>
-      <VBox BorderPane.alignment="CENTER">
-         <children>
-            <Label text="Bienvenido/a">
-               <font>
-                  <Font name="System Bold" size="48.0" />
-               </font>
-            </Label>
-            <Label text="Edarkea Systems Application" textFill="#4a4a4a">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Label>
-         </children>
-      </VBox>
-   </center>
-   <padding>
-      <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
-   </padding>
+<BorderPane xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <center>
+        <VBox BorderPane.alignment="CENTER">
+            <children>
+                <Label text="Bienvenido/a">
+                    <font>
+                        <Font name="System Bold" size="48.0" />
+                    </font>
+                </Label>
+                <Label text="Edarkea Systems Application" textFill="#4a4a4a">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+            </children>
+        </VBox>
+    </center>
+    <padding>
+        <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
+    </padding>
+    <stylesheets>
+        <URL value="@../../styles/base.css" />
+        <URL value="@../../styles/base_extras.css" />
+        <URL value="@../../styles/base_other_libraries.css" />
+        <URL value="@../../styles/dark_theme.css" />
+        <URL value="@../../styles/light_theme.css" />
+    </stylesheets>
 </BorderPane>

@@ -1,4 +1,4 @@
-description = 'Framework UI Java FX'
+description = 'Edark UI'
 
 apply plugin: 'application'
 apply plugin: 'java'
@@ -15,4 +15,5 @@ dependencies {
     implementation 'io.github.mkpaz:atlantafx-base:2.0.1'
     implementation project(':edark-utils')
     implementation project(':edark-core')
+    implementation project(':edark-icons')
 }

@@ -1,4 +1,4 @@
-description = 'Framework Core Edark'
+description = 'Edark Core'
 
 dependencies {
     compileOnly 'org.projectlombok:lombok:1.18.28'

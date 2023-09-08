@@ -4,13 +4,20 @@
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1">
-   <center>
-      <TabPane fx:id="tabid" tabClosingPolicy="ALL_TABS" BorderPane.alignment="CENTER">
-        <tabs>
-          <Tab text="Untitled Tab 1" />
-          <Tab text="Untitled Tab 2" />
-        </tabs>
-      </TabPane>
-   </center>
+<BorderPane xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <center>
+        <TabPane fx:id="tabid" tabClosingPolicy="ALL_TABS" BorderPane.alignment="CENTER">
+            <tabs>
+                <Tab text="Untitled Tab 1" />
+                <Tab text="Untitled Tab 2" />
+            </tabs>
+        </TabPane>
+    </center>
+    <stylesheets>
+        <URL value="@../../styles/base.css" />
+        <URL value="@../../styles/base_extras.css" />
+        <URL value="@../../styles/base_other_libraries.css" />
+        <URL value="@../../styles/dark_theme.css" />
+        <URL value="@../../styles/light_theme.css" />
+    </stylesheets>
 </BorderPane>
