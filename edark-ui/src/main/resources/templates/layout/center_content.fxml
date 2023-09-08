@@ -13,11 +13,4 @@
             </tabs>
         </TabPane>
     </center>
-    <stylesheets>
-        <URL value="@../../styles/base.css" />
-        <URL value="@../../styles/base_extras.css" />
-        <URL value="@../../styles/base_other_libraries.css" />
-        <URL value="@../../styles/dark_theme.css" />
-        <URL value="@../../styles/light_theme.css" />
-    </stylesheets>
 </BorderPane>

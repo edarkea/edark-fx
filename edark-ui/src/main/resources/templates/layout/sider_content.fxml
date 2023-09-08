@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TreeView?>
-<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.Pane?>
@@ -38,13 +38,13 @@
                   </VBox>
                </center>
                <left>
-                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
-                     <image>
-                        <Image url="@../../img/icons/user_icon.png" />
-                     </image>
+                  <ImageView fx:id="img_profile" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                      <BorderPane.margin>
-                        <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                        <Insets bottom="1.0" left="1.0" right="1.0" top="2.0" />
                      </BorderPane.margin>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
                   </ImageView>
                </left>
             </BorderPane>

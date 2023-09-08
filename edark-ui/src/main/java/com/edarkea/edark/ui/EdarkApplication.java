@@ -1,15 +1,15 @@
 package com.edarkea.edark.ui;
 
-import atlantafx.base.theme.CupertinoDark;
 import atlantafx.base.theme.CupertinoLight;
-import atlantafx.base.theme.Dracula;
-import atlantafx.base.theme.PrimerLight;
 import com.edarkea.edark.core.enums.ActionEnum;
 import com.edarkea.edark.core.ui.FooterUIModel;
 import com.edarkea.edark.core.ui.HeaderUIModel;
 import com.edarkea.edark.core.ui.MainConfigUIModel;
 import com.edarkea.edark.core.ui.OptionUIModel;
 import com.edarkea.edark.core.ui.UserUIModel;
+import com.edarkea.edark.icons.EdarkIcon;
+import com.edarkea.edark.icons.IconLoader;
+import com.edarkea.edark.icons.IconSize;
 import com.edarkea.edark.ui.controllers.HeaderUIController;
 import com.edarkea.edark.ui.models.RootConfigModel;
 import com.edarkea.edark.utils.JsonFileConverter;
@@ -29,6 +29,7 @@ import javafx.scene.control.TabPane;
 import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeView;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
@@ -151,7 +152,7 @@ public class EdarkApplication extends Application {
         return pane;
     }
     
-    private static BorderPane loadSidebarComponent(Class fromClass, String name, UserUIModel user) throws IOException {
+    private static BorderPane loadSidebarComponent(Class fromClass, String name, UserUIModel user) throws IOException, Exception {
         FXMLLoader loader = new FXMLLoader(fromClass.getResource(name));
         BorderPane pane = loader.load();
         
@@ -160,6 +161,9 @@ public class EdarkApplication extends Application {
         Label userRoleName = (Label) loader.getNamespace().get("lbl_role_name");
         userRoleName.setText(user.getRole());
         
+        ImageView imageView = (ImageView) loader.getNamespace().get("img_profile");
+        imageView.setImage(IconLoader.getImageIcon(IconSize.X48, EdarkIcon.user));
+
         TreeItem root1 = new TreeItem("Programming Languages");
         TreeItem item1 = new TreeItem("Java");
         TreeItem item2 = new TreeItem("Python");

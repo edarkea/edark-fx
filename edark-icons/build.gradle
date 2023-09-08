@@ -1,1 +1,5 @@
-description = 'Edark Icons'
+description = 'Edark Icons' 
+
+dependencies {
+    implementation 'org.apache.xmlgraphics:batik-all:1.17'
+}
