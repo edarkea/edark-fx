@@ -35,6 +35,9 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
+import org.kordamp.ikonli.antdesignicons.AntDesignIconsFilled;
+import org.kordamp.ikonli.antdesignicons.AntDesignIconsOutlined;
+import org.kordamp.ikonli.javafx.FontIcon;
 
 /**
  *
@@ -223,23 +226,19 @@ public class EdarkApplication extends Application {
         ImageView imgUser = (ImageView) loader.getNamespace().get("img_user");
         imgUser.setImage(IconLoader.getImageIcon(IconSize.X128, EdarkIcon.user));
 
-        ImageView imgUserName = (ImageView) loader.getNamespace().get("icn_username");
-        imgUserName.setImage(IconLoader.getImageIcon(IconSize.X20, EdarkIcon.user));
+        Label imgUserName = (Label) loader.getNamespace().get("icn_username");
+        imgUserName.setGraphic(new FontIcon(AntDesignIconsOutlined.USER));
 
-        ImageView imgPassword = (ImageView) loader.getNamespace().get("icn_password");
-        imgPassword.setImage(IconLoader.getImageIcon(IconSize.X20, EdarkIcon.lock_security));
-
-        ImageView imgShowPassword = (ImageView) loader.getNamespace().get("icn_showpassword");
-        imgShowPassword.setImage(IconLoader.getImageIcon(IconSize.X20, EdarkIcon.eye));
-
-        ImageView imgLogin = (ImageView) loader.getNamespace().get("icn_login");
-        imgLogin.setImage(IconLoader.getImageIcon(IconSize.X20, EdarkIcon.in_log));
+        Label imgPassword = (Label) loader.getNamespace().get("icn_password");
+        imgPassword.setGraphic(new FontIcon(AntDesignIconsOutlined.LOCK));
 
         Button btnLogin = (Button) loader.getNamespace().get("btn_login");
+        btnLogin.setGraphic(new FontIcon(AntDesignIconsOutlined.LOGIN));
         btnLogin.setUserData("onLogin");
         btnLogin.setOnAction(controller);
 
         Label labelPassword = (Label) loader.getNamespace().get("btn_showpasswod");
+        labelPassword.setGraphic(new FontIcon(AntDesignIconsOutlined.EYE));
         labelPassword.setUserData("onShowPassword");
         labelPassword.setOnMouseClicked(controller);
 
@@ -254,7 +253,7 @@ public class EdarkApplication extends Application {
 
         controller.setPasswordTextField(ptf);
         controller.setLabelPassword(labelPassword);
-        
+
         return pane;
     }
 }

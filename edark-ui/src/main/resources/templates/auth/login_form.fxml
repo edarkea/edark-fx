@@ -14,82 +14,67 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="435.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
-   <center>
-      <VBox alignment="CENTER" BorderPane.alignment="CENTER">
-         <children>
-            <Label text="Iniciar Sesión">
-               <font>
-                  <Font name="System Bold" size="32.0" />
-               </font>
-            </Label>
-            <Label text="Edark Systems Application" />
-            <Separator prefWidth="200.0" />
-            <ImageView fx:id="img_user" fitHeight="128.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true" />
-            <VBox spacing="7.0">
-               <children>
-                  <Label text="Usuario:" />
-                  <InputGroup>
-                     <children>
-                        <Label>
-                           <graphic>
-                              <ImageView fx:id="icn_username" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" />
-                           </graphic>
-                        </Label>
-                        <TextField prefHeight="36.0" prefWidth="260.0" promptText="Escribir usuario" />
-                     </children>
-                  </InputGroup>
-                  <Label text="Contraseña:" />
-                  <InputGroup>
-                     <children>
-                        <Label>
-                           <graphic>
-                              <ImageView fx:id="icn_password" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" />
-                           </graphic>
-                        </Label>
-                        <PasswordTextField fx:id="txtPassword" prefHeight="36.0" prefWidth="223.0" promptText="Escribir contraseña" />
-                        <Label fx:id="btn_showpasswod">
-                           <graphic>
-                              <ImageView fx:id="icn_showpassword" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" />
-                           </graphic>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Label>
-                     </children>
-                  </InputGroup>
-                  <HBox alignment="CENTER_RIGHT">
-                     <children>
-                        <Button fx:id="btn_login" mnemonicParsing="false" text="Iniciar Sesión">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                           <graphic>
-                              <ImageView fx:id="icn_login" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" />
-                           </graphic>
-                        </Button>
-                     </children>
-                     <VBox.margin>
-                        <Insets />
-                     </VBox.margin>
-                  </HBox>
-               </children>
-            </VBox>
-         </children>
-         <padding>
-            <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
-         </padding>
-      </VBox>
-   </center>
-   <bottom>
-      <Label fx:id="lbl_desciption" text="Edarkea Systems © {{year}} Todos los derechos reservados." textFill="#686868" BorderPane.alignment="CENTER">
-         <font>
-            <Font size="11.0" />
-         </font>
-      </Label>
-   </bottom>
-   <padding>
-      <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
-   </padding>
+    <center>
+        <VBox alignment="CENTER" BorderPane.alignment="CENTER">
+            <children>
+                <Label text="Iniciar Sesión">
+                    <font>
+                        <Font name="System Bold" size="32.0" />
+                    </font>
+                </Label>
+                <Label text="Edark Systems Application" />
+                <Separator prefWidth="200.0" />
+                <ImageView fx:id="img_user" fitHeight="128.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true" />
+                <VBox spacing="7.0">
+                    <children>
+                        <Label text="Usuario:" />
+                        <InputGroup>
+                            <children>
+                                <Label fx:id="icn_username" />
+                                <TextField prefHeight="36.0" prefWidth="266.0" promptText="Escribir usuario" />
+                            </children>
+                        </InputGroup>
+                        <Label text="Contraseña:" />
+                        <InputGroup>
+                            <children>
+                                <Label fx:id="icn_password" />
+                                <PasswordTextField fx:id="txtPassword" prefHeight="36.0" prefWidth="242.0" promptText="Escribir contraseña" />
+                                <Label fx:id="btn_showpasswod">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                </Label>
+                            </children>
+                        </InputGroup>
+                        <HBox alignment="CENTER_RIGHT">
+                            <children>
+                                <Button fx:id="btn_login" mnemonicParsing="false" text="Iniciar Sesión">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                </Button>
+                            </children>
+                            <VBox.margin>
+                                <Insets />
+                            </VBox.margin>
+                        </HBox>
+                    </children>
+                </VBox>
+            </children>
+            <padding>
+                <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+            </padding>
+        </VBox>
+    </center>
+    <bottom>
+        <Label fx:id="lbl_desciption" text="Edarkea Systems © {{year}} Todos los derechos reservados." textFill="#686868" BorderPane.alignment="CENTER">
+            <font>
+                <Font size="11.0" />
+            </font>
+        </Label>
+    </bottom>
+    <padding>
+        <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
+    </padding>
 </BorderPane>

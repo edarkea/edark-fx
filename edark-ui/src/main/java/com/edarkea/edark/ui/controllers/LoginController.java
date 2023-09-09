@@ -11,6 +11,8 @@ import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import org.kordamp.ikonli.antdesignicons.AntDesignIconsOutlined;
+import org.kordamp.ikonli.javafx.FontIcon;
 
 /**
  *
@@ -19,15 +21,13 @@ import javafx.scene.image.ImageView;
 public class LoginController implements EventHandler {
 
     private boolean isShowPassword;
-    private final Image eye;
-    private final Image eyeOff;
+    private final FontIcon eye = new FontIcon(AntDesignIconsOutlined.EYE);
+    private final FontIcon eyeOff = new FontIcon(AntDesignIconsOutlined.EYE_INVISIBLE);;
     private PasswordTextField password;
     private Label labelPassword;
 
     public LoginController() throws Exception {
         isShowPassword = false;
-        this.eye = IconLoader.getImageIcon(IconSize.X20, EdarkIcon.eye);
-        this.eyeOff = IconLoader.getImageIcon(IconSize.X20, EdarkIcon.eye_off);
     }
 
     @Override
@@ -56,10 +56,10 @@ public class LoginController implements EventHandler {
         if (this.password != null) {
             this.isShowPassword = !this.isShowPassword;
             if (this.isShowPassword) {
-                labelPassword.setGraphic(new ImageView(this.eyeOff));
+                labelPassword.setGraphic(eyeOff);
                 this.password.setRevealPassword(true);
             } else {
-                labelPassword.setGraphic(new ImageView(this.eye));
+                labelPassword.setGraphic(eye);
                 this.password.setRevealPassword(false);
             }
         }
