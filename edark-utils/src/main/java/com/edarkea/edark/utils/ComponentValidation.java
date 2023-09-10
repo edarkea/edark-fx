@@ -4,6 +4,7 @@ import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuItem;
+import javafx.scene.control.TreeItem;
 
 /**
  *
@@ -25,6 +26,10 @@ public class ComponentValidation {
 
     public static boolean isNode(Object source) {
         return source instanceof Node;
+    }
+    
+    public static boolean isTreeItem(Object source) {
+        return source instanceof TreeItem;
     }
 
 }

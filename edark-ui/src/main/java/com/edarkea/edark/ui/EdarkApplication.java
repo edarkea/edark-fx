@@ -66,8 +66,8 @@ public class EdarkApplication extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         Application.setUserAgentStylesheet(new NordLight().getUserAgentStylesheet());
-        loadComponentEngine(primaryStage, "auth_component", new AuthComponent(appSettings));
-        registerComponent("main_component", new MainComponent());
+        loadComponentEngine(primaryStage, "auth_component", new MainComponent(appSettings));
+        registerComponent("main_component", new MainComponent(appSettings));
 
         primaryStage.setTitle(appSettings.applicationName);
         primaryStage.getIcons().add(new Image(appSettings.pathLogo));
