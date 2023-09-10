@@ -3,6 +3,9 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SeparatorMenuItem?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
@@ -22,6 +25,12 @@
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
+               <items>
+                  <MenuItem fx:id="mi_profile" mnemonicParsing="false" text="Perfil" />
+                  <MenuItem fx:id="mi_logout" mnemonicParsing="false" text="Cerrar Sesión" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem fx:id="mi_exit" mnemonicParsing="false" text="Salir" />
+               </items>
             </MenuButton>
          </children>
       </HBox>
@@ -29,4 +38,14 @@
    <padding>
       <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
    </padding>
+   <bottom>
+      <Separator BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <padding>
+            <Insets top="7.0" />
+         </padding>
+      </Separator>
+   </bottom>
 </BorderPane>

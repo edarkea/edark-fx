@@ -9,7 +9,7 @@ import javafx.scene.control.MenuItem;
  *
  * @author Steeven Ayui
  */
-public class ComponentUtil {
+public class ComponentValidation {
 
     public static boolean isButton(Object source) {
         return source instanceof Button;

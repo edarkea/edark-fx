@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="435.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane prefHeight="550.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
     <center>
         <VBox alignment="CENTER" BorderPane.alignment="CENTER">
             <children>
@@ -26,7 +26,7 @@
                 <Label text="Edark Systems Application" />
                 <Separator prefWidth="200.0" />
                 <ImageView fx:id="img_user" fitHeight="128.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true" />
-                <VBox spacing="7.0">
+                <VBox spacing="4.0">
                     <children>
                         <Label text="Usuario:" />
                         <InputGroup>
@@ -49,7 +49,7 @@
                         </InputGroup>
                         <HBox alignment="CENTER_RIGHT">
                             <children>
-                                <Button fx:id="btn_login" mnemonicParsing="false" text="Iniciar Sesión">
+                                <Button fx:id="btn_login" defaultButton="true" mnemonicParsing="false" text="Iniciar Sesión">
                                     <cursor>
                                         <Cursor fx:constant="HAND" />
                                     </cursor>
@@ -58,6 +58,9 @@
                             <VBox.margin>
                                 <Insets />
                             </VBox.margin>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
                         </HBox>
                     </children>
                 </VBox>

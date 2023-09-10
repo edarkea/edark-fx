@@ -1,6 +1,7 @@
 package com.edarkea.edark.icons;
 
 import java.awt.image.BufferedImage;
+import java.io.IOException;
 import java.net.URL;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.scene.image.Image;
@@ -17,7 +18,7 @@ import org.apache.batik.util.SVGConstants;
  */
 public class IconLoader {
 
-    public static Image getImageIcon(IconSize size, EdarkIcon icon) throws Exception {
+    public static Image getImageIcon(IconSize size, EdarkIcon icon) throws IOException {
         try {
             URL svgURL = IconLoader.class.getResource("/svg/" + icon.getText());
             EdarkTranscoder transcoder = new EdarkTranscoder();
@@ -35,7 +36,7 @@ public class IconLoader {
             Image image = SwingFXUtils.toFXImage(bufferedImage, null);
             return image;
         } catch (TranscoderException e) {
-            throw new Exception(e.getMessage());
+            throw new IOException(e.getMessage());
         }
     }
 }
